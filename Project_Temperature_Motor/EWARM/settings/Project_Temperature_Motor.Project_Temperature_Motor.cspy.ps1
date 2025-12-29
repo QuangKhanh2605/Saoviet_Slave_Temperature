@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Project_STM32\Project_Temperature_Motor\EWARM\settings\Project_Temperature_Motor.Project_Temperature_Motor.general.xcl" --backend -f "D:\Project_STM32\Project_Temperature_Motor\EWARM\settings\Project_Temperature_Motor.Project_Temperature_Motor.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\settings\Project_Temperature_Motor.Project_Temperature_Motor.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\settings\Project_Temperature_Motor.Project_Temperature_Motor.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Project_STM32\Project_Temperature_Motor\EWARM\settings\Project_Temperature_Motor.Project_Temperature_Motor.general.xcl" --debug_file=$debugfile --backend -f "D:\Project_STM32\Project_Temperature_Motor\EWARM\settings\Project_Temperature_Motor.Project_Temperature_Motor.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\settings\Project_Temperature_Motor.Project_Temperature_Motor.general.xcl" --debug_file=$debugfile --backend -f "D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\settings\Project_Temperature_Motor.Project_Temperature_Motor.driver.xcl" 
 }

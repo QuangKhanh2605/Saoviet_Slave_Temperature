@@ -1,76 +1,76 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.40.2.214/W32 for ARM                  23/Oct/2025  10:15:43
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  07/Nov/2025  15:01:42
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Exe\Project_Temperature_Motor.out
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Exe\Project_Temperature_Motor.out
 #    Map file     =
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\List\Project_Temperature_Motor.map
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\List\Project_Temperature_Motor.map
 #    Command line =
-#        -f C:\Users\PC\AppData\Local\Temp\EWB807.tmp
-#        (D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\dac.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\dma.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\event_driven.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\gpio.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\i2c.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\iwdg.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\main.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\onchipflash.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\queue_p.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\rtc.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\startup_stm32l072xx.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_cortex.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_dac.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_dac_ex.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_dma.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_exti.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_flash.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_flash_ex.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_flash_ramfunc.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_gpio.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_i2c.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_i2c_ex.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_iwdg.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_msp.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_pwr.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_pwr_ex.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_rcc.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_rcc_ex.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_rtc.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_rtc_ex.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_uart.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_uart_ex.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_it.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\system_stm32l0xx.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\usart.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_adv_trace.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_app_comm.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_app_modbus_rtu.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_app_rs485.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_app_sensor.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_at_serial.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_convert_variable.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_internal_mem.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_mem_comm.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_modbus_rtu.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_obis_sv.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_rs485.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_rtc.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_string.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_time.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_timer.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_tiny_vsnprintf.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_uart.o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_util.o
+#        -f C:\Users\PC\AppData\Local\Temp\EWFAEC.tmp
+#        (D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\dac.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\dma.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\event_driven.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\gpio.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\i2c.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\iwdg.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\main.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\onchipflash.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\queue_p.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\rtc.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\startup_stm32l072xx.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_cortex.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_dac.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_dac_ex.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_dma.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_exti.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_flash.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_flash_ex.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_flash_ramfunc.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_gpio.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_i2c.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_i2c_ex.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_iwdg.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_msp.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_pwr.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_pwr_ex.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_rcc.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_rcc_ex.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_rtc.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_rtc_ex.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_uart.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_hal_uart_ex.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\stm32l0xx_it.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\system_stm32l0xx.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\usart.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_adv_trace.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_app_comm.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_app_modbus_rtu.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_app_rs485.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_app_sensor.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_at_serial.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_convert_variable.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_internal_mem.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_mem_comm.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_modbus_rtu.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_obis_sv.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_rs485.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_rtc.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_string.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_time.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_timer.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_tiny_vsnprintf.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_uart.o
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj\user_util.o
 #        --no_out_extension -o
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Exe\Project_Temperature_Motor.out
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Exe\Project_Temperature_Motor.out
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
 #        --map
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\List\Project_Temperature_Motor.map
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\List\Project_Temperature_Motor.map
 #        --config
-#        D:\Project_STM32\Project_Temperature_Motor\EWARM/stm32l072xx_flash.icf
+#        D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM/stm32l072xx_flash.icf
 #        --semihosting --entry __iar_program_start --vfe --text_out locale)
 #
 ###############################################################################
@@ -483,7 +483,7 @@ command line/config:
     ---------------------------------------------------
     Total:
 
-D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj: [1]
+D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj: [1]
     dac.o                         156                20
     dma.o                          44
     event_driven.o                 78
@@ -1106,7 +1106,7 @@ vcom_Init                0x800'2ea3    0xa  Code  Gb  user_app_comm.o [1]
 vcom_Trace_DMA           0x800'2ed9   0x24  Code  Gb  user_app_comm.o [1]
 
 
-[1] = D:\Project_STM32\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj
+[1] = D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_Temperature_Motor\EWARM\Project_Temperature_Motor\Obj
 [2] = dl6M_tlf.a
 [3] = m6M_tl.a
 [4] = rt6M_tl.a
