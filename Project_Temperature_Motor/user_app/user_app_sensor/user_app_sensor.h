@@ -75,6 +75,7 @@ typedef struct
 extern sEvent_struct        sEventAppSensor[];
 extern struct_SensorTemp    sSensorTemp;
 extern struct_TempAlarm     sTempAlarm;
+extern struct_CalibDAC      sCalibDAC;
 /*====================Function Handle====================*/
 
 uint8_t    AppSensor_Task(void);

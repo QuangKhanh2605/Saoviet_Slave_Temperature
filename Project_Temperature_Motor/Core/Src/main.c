@@ -101,6 +101,8 @@ int main(void)
   MX_IWDG_Init();
   /* USER CODE BEGIN 2 */
   Main_Task();
+//  HAL_GPIO_WritePin(RS485_TXDE_GPIO_Port, RS485_TXDE_Pin, GPIO_PIN_RESET);  
+//  HAL_GPIO_WritePin(OPTO_GPIO_Port, OPTO_Pin, GPIO_PIN_RESET);  
   /* USER CODE END 2 */
 
   /* Infinite loop */

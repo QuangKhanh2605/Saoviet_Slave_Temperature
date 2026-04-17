@@ -91,12 +91,7 @@ static uint8_t fevent_sensor_dac(uint8_t event)
     }
     else
     {
-        if(sCalibDAC.DAC_ATcmd_u16 < sCalibDAC.DAC_Min_u16)
-            Data = sCalibDAC.DAC_Min_u16;
-        else if (sCalibDAC.DAC_ATcmd_u16 > sCalibDAC.DAC_Max_u16)
-            Data = sCalibDAC.DAC_Max_u16;
-        else
-            Data = sCalibDAC.DAC_ATcmd_u16;
+        Data = sCalibDAC.DAC_ATcmd_u16;
     }
     
     HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, Data);
