@@ -132,7 +132,8 @@ static uint8_t fevent_sensor_handle(uint8_t event)
         Stamp = sMeasure.Humi_Value_f + sOffset.Humi_f;
         sMeasure.Humi_Filter_f = ((Stamp) > HUMI_MAX) ? HUMI_MAX : ((Stamp) < HUMI_MIN ? HUMI_MIN : (Stamp));
         
-        sMeasure.Temp_Filter_f = Filter_pH(sMeasure.Temp_Filter_f);
+//        sMeasure.Temp_Filter_f = Filter_pH(sMeasure.Temp_Filter_f);
+        sMeasure.Temp_Filter_f = sMeasure.Temp_Filter_f;
         sMeasure.Humi_Filter_f = sMeasure.Humi_Filter_f;
     }
     

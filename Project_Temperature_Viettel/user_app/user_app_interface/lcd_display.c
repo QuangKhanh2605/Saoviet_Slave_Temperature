@@ -31,8 +31,8 @@ sEvent_struct sEventDisplay [] =
 sLCDinformation      sLCD;
 
 sParameter_Display   sParaDisplay = {
-    .Scale_Temp = 0xFF,
-    .Scale_Humi = 0x00,
+    .Scale_Temp = 0xFE,
+    .Scale_Humi = 0xFF,
 };
 
 Struct_Index_LCD     sIndexLCD = {
@@ -44,7 +44,7 @@ Struct_Index_LCD     sIndexLCD = {
 
 sData   sModelVersion = {(uint8_t *) "SV_ENVI_WM_NH4", 14}; 
 
-uint8_t aPASSWORD[4] = {"0000"};
+uint8_t aPASSWORD[4] = {"1111"};
 
 uint8_t aSTT_SETTING_FREE[14]   = {"              "};
 uint8_t aSTT_SETTING_ENTER[14]  = {"Enter to Setup"};

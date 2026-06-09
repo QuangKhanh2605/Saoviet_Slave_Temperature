@@ -732,7 +732,7 @@
                     <item>sCalibDAC</item>
                     <item>Data</item>
                     <item>sSensorTemp</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
@@ -805,7 +805,7 @@
             <IarPane-34092>
                 <expressions>
                     <item>Data</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

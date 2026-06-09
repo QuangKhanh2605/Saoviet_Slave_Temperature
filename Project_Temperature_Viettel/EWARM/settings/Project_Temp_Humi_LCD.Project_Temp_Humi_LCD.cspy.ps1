@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Project_STM32\Temp_Humi_Viettel\Project_Temp_Humi_LCD_Ver_1\EWARM\settings\Project_Temp_Humi_LCD.Project_Temp_Humi_LCD.general.xcl" --backend -f "D:\Project_STM32\Temp_Humi_Viettel\Project_Temp_Humi_LCD_Ver_1\EWARM\settings\Project_Temp_Humi_LCD.Project_Temp_Humi_LCD.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_Slave_Temperature\Project_Temperature_Viettel\EWARM\settings\Project_Temp_Humi_LCD.Project_Temp_Humi_LCD.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_Slave_Temperature\Project_Temperature_Viettel\EWARM\settings\Project_Temp_Humi_LCD.Project_Temp_Humi_LCD.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Project_STM32\Temp_Humi_Viettel\Project_Temp_Humi_LCD_Ver_1\EWARM\settings\Project_Temp_Humi_LCD.Project_Temp_Humi_LCD.general.xcl" --debug_file=$debugfile --backend -f "D:\Project_STM32\Temp_Humi_Viettel\Project_Temp_Humi_LCD_Ver_1\EWARM\settings\Project_Temp_Humi_LCD.Project_Temp_Humi_LCD.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_Slave_Temperature\Project_Temperature_Viettel\EWARM\settings\Project_Temp_Humi_LCD.Project_Temp_Humi_LCD.general.xcl" --debug_file=$debugfile --backend -f "D:\Saoviet_Git\Saoviet_Slave_Temperature\Project_Temperature_Viettel\EWARM\settings\Project_Temp_Humi_LCD.Project_Temp_Humi_LCD.driver.xcl" 
 }

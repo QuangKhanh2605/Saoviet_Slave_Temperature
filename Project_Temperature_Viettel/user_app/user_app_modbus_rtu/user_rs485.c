@@ -76,6 +76,7 @@ void RS485_Stop_RX_Mode (void)
 #endif
 }
 
+uint8_t flag_recv = 0;
 
 void RS485_Rx_Callback (uint16_t Size)
 {
@@ -85,7 +86,8 @@ void RS485_Rx_Callback (uint16_t Size)
     if (sUart485.Length_u16 >= (sizeof(aUART_485_DATA) - 1))
         sUart485.Length_u16 = 0;
 
-    HAL_UART_Receive_IT(&uart_rs485, &Uart485RxByte, 1);
+    flag_recv = HAL_UART_Receive_IT(&uart_rs485, &Uart485RxByte, 1);
+    
 
     Rs485Status_u8 = TRUE;
     fevent_enable(sEventAppRs485, _EVENT_RS485_RECEIVE_COMPLETE);

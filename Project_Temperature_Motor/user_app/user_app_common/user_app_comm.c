@@ -514,10 +514,10 @@ void Main_Task (void)
     
 //    APP_LOG(TS_OFF, DBLEVEL_M, "SVWM VERSION: \"%s\"\r\n", (char *) sFirmVersion.Data_a8 );
 
-    if (AppComm_Get_Reset_Source () == TRUE)
-    {
-        HAL_Delay(2000); 
-    }
+//    if (AppComm_Get_Reset_Source () == TRUE)
+//    {
+//        HAL_Delay(2000); 
+//    }
     
 	for (;;)
 	{

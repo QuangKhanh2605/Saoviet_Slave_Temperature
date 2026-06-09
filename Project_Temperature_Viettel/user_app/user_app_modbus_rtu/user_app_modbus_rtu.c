@@ -71,10 +71,10 @@ struct_CheckList_Reg_Modbus_RTU sCheckList_Reg_Modbus_RTU[] =
       {_E_REGISTER_BEGIN,           NULL,      NULL,   NONE_Register_CallBack,           NONE_Register_CallBack},
 
       {_E_REG_ID_RS485,             0x0000,    1,      _Cb_R_ModbusRTU_REG_ID_RS485,        _Cb_W_ModbusRTU_REG_ID_RS485},
-      {_E_REG_BAUDRATE_RS485,       0x0001,    1,      _Cb_R_ModbusRTU_REG_Baudrate_RS485,  _Cb_W_ModbusRTU_REG_Baudrate_RS485},
-      {_E_REG_TEMP_INT,             0x0002,    1,      _Cb_R_ModbusRTU_REG_Temp_Int,        NONE_Register_CallBack},
-      {_E_REG_TEMP_DECIMAL,         0x0003,    1,      _Cb_R_ModbusRTU_REG_Temp_Decimal,    NONE_Register_CallBack},
-      {_E_REG_HUMI_INT,             0x0004,    1,      _Cb_R_ModbusRTU_REG_Humi_Int,        NONE_Register_CallBack},
+      {_E_REG_TEMP_INT,             0x0001,    1,      _Cb_R_ModbusRTU_REG_Temp_Int,        NONE_Register_CallBack},
+      {_E_REG_HUMI_INT,             0x0002,    1,      _Cb_R_ModbusRTU_REG_Humi_Int,        NONE_Register_CallBack},
+      {_E_REG_BAUDRATE_RS485,       0x0003,    1,      _Cb_R_ModbusRTU_REG_Baudrate_RS485,  _Cb_W_ModbusRTU_REG_Baudrate_RS485},
+      {_E_REG_TEMP_DECIMAL,         0x0004,    1,      _Cb_R_ModbusRTU_REG_Temp_Decimal,    NONE_Register_CallBack},
       {_E_REG_HUMI_DECIMAL,         0x0005,    1,      _Cb_R_ModbusRTU_REG_Humi_Decimal,    NONE_Register_CallBack},
       {_E_REG_TEMP_WARNING,         0x0006,    1,      _Cb_R_ModbusRTU_REG_Temp_Warning,    NONE_Register_CallBack},
       {_E_REG_HUMI_WARNING,         0x0007,    1,      _Cb_R_ModbusRTU_REG_Humi_Warning,    NONE_Register_CallBack},
@@ -171,8 +171,9 @@ uint8_t _Cb_R_ModbusRTU_REG_Temp_Int(sData *str, uint16_t Pos)
 }
 uint8_t _Cb_R_ModbusRTU_REG_Temp_Decimal(sData *str, uint16_t Pos)
 {
-    sLogData_ModbusRTU.Data_a8[sLogData_ModbusRTU.Length_u16++] = 0x00;
-    sLogData_ModbusRTU.Data_a8[sLogData_ModbusRTU.Length_u16++] = (uint8_t)log10(Calculator_Scale(sParaDisplay.Scale_Temp));
+    uint16_t Decimal = Calculator_Scale(sParaDisplay.Scale_Temp);
+    sLogData_ModbusRTU.Data_a8[sLogData_ModbusRTU.Length_u16++] = Decimal >>8 ;
+    sLogData_ModbusRTU.Data_a8[sLogData_ModbusRTU.Length_u16++] = Decimal;
     return 1;
 }
 uint8_t _Cb_R_ModbusRTU_REG_Humi_Int(sData *str, uint16_t Pos)
@@ -185,8 +186,9 @@ uint8_t _Cb_R_ModbusRTU_REG_Humi_Int(sData *str, uint16_t Pos)
 }
 uint8_t _Cb_R_ModbusRTU_REG_Humi_Decimal(sData *str, uint16_t Pos)
 {
-    sLogData_ModbusRTU.Data_a8[sLogData_ModbusRTU.Length_u16++] = 0x00;
-    sLogData_ModbusRTU.Data_a8[sLogData_ModbusRTU.Length_u16++] = (uint8_t)log10(Calculator_Scale(sParaDisplay.Scale_Humi));;
+    uint16_t Decimal = Calculator_Scale(sParaDisplay.Scale_Humi);
+    sLogData_ModbusRTU.Data_a8[sLogData_ModbusRTU.Length_u16++] = Decimal >> 8;
+    sLogData_ModbusRTU.Data_a8[sLogData_ModbusRTU.Length_u16++] = Decimal;
     return 1;
 }
 
@@ -607,6 +609,8 @@ uint8_t _Cb_W_ModbusRTU_REG_Humi_Upper(sData *str, uint16_t Pos)
 /*
     @brief Send 485 sensor
 */
+
+uint32_t count_trans = 0;
 void        Send_RS458_Sensor(uint8_t *aData, uint16_t Length_u16) 
 {
 //    HAL_GPIO_WritePin(RS485_TXDE_S_GPIO_Port, RS485_TXDE_S_Pin, GPIO_PIN_SET);
@@ -619,9 +623,9 @@ void        Send_RS458_Sensor(uint8_t *aData, uint16_t Length_u16)
 //    
 //    HAL_GPIO_WritePin(RS485_TXDE_S_GPIO_Port, RS485_TXDE_S_Pin, GPIO_PIN_RESET);
   
-
+    count_trans++;
     HAL_GPIO_WritePin(DE_GPIO_PORT, DE_GPIO_PIN, GPIO_PIN_SET);
-    HAL_Delay(10);
+    HAL_Delay(5);
     // Send
 //    RS485_Init_Data();
     HAL_UART_Transmit(&uart_rs485, aData , Length_u16, 1000); 

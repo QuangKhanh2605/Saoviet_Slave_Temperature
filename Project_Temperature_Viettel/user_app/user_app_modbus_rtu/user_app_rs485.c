@@ -12,15 +12,16 @@ sEvent_struct               sEventAppRs485[]=
 {
   {_EVENT_RS485_ENTRY,              1, 5, 5,                fevent_rs485_entry},            //Doi slave khoi dong moi truyen opera
   {_EVENT_RS485_INIT_UART,          1, 5, 5,                fevent_rs485_init_uart},
-  {_EVENT_RS485_RECEIVE_COMPLETE,   0, 5, 20,               fevent_rs485_receive_complete},
+  {_EVENT_RS485_RECEIVE_COMPLETE,   0, 5, 20,                fevent_rs485_receive_complete},
 
-  {_EVENT_RS485_REFRESH,            0, 5, 60000,            fevent_rs485_refresh},
+  {_EVENT_RS485_REFRESH,            0, 5, 60000*2,          fevent_rs485_refresh},
 };
 extern sData sUart485;
 uint16_t CountBufferHandleRecv = 0;
 /*========================Function Handle========================*/
 static uint8_t fevent_rs485_entry(uint8_t event)
 {
+    fevent_enable(sEventAppRs485, _EVENT_RS485_REFRESH);
     return 1;
 }
 
@@ -36,17 +37,25 @@ static uint8_t fevent_rs485_init_uart(uint8_t event)
     return 1;
 }
 
-
+uint32_t count_recv = 0;
 static uint8_t fevent_rs485_receive_complete(uint8_t event)
 {
 /*------------------Xu ly chuoi nhan duoc----------------*/
-    Modem_Check_RTU(&sUart485);
+    if(sMeasure.sConnect_u8 == 1)
+    {
+        Modem_Check_RTU(&sUart485);
+        count_recv++;
+    }
+    
     Reset_Buff(&sUart485);
+    
+    fevent_enable(sEventAppRs485, _EVENT_RS485_REFRESH);
     return 1;
 }
 
 static uint8_t fevent_rs485_refresh(uint8_t event)
 {
+    Init_UartRs485(aBaudrate_value[sSlave_ModbusRTU.Baudrate]);
     return 1;
 }
 

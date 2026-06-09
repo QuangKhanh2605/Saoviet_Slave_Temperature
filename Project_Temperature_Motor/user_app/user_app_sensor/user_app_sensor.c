@@ -16,8 +16,8 @@ static uint8_t fevent_refresh_iwdg(uint8_t event);
 sEvent_struct               sEventAppSensor[]=
 {
   {_EVENT_SENSOR_ENTRY,              1, 5, 2,                fevent_sensor_entry},            //Doi slave khoi dong moi truyen opera
-  {_EVENT_SENSOR_HANDLE,             1, 5, 2000,             fevent_sensor_handle}, 
-  {_EVENT_SENSOR_DAC,                1, 5, 500,              fevent_sensor_dac},
+  {_EVENT_SENSOR_HANDLE,             1, 0, 250,              fevent_sensor_handle}, 
+  {_EVENT_SENSOR_DAC,                0, 0, 200,              fevent_sensor_dac},
   
   {_EVENT_TEMP_ALARM,                1, 5, 2000,             fevent_temp_alarm},
   {_EVENT_REFRESH_IWDG,              1, 5, 500,              fevent_refresh_iwdg},
@@ -55,6 +55,7 @@ static uint8_t fevent_sensor_handle(uint8_t event)
     {
         raw = ((uint16_t)data[1] << 8) | data[0];
         sSensorTemp.TempObject_f = (raw * 0.02) - 273.15;
+        fevent_active(sEventAppSensor, _EVENT_SENSOR_DAC);
     }
     else
     {

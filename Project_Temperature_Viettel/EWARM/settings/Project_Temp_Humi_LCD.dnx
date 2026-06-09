@@ -14,10 +14,10 @@
     <StLinkDriver>
         <stlinkserialNo>31531457</stlinkserialNo>
         <stlinkfoundProbes />
-        <CStepIntDis>_ 0</CStepIntDis>
-        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
         <stlinkResetStyle>0</stlinkResetStyle>
         <stlinkResetStrategy>2</stlinkResetStrategy>
+        <CStepIntDis>_ 0</CStepIntDis>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </StLinkDriver>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -25,11 +25,11 @@
     </Exceptions>
     <SWOTraceHWSettings>
         <OverrideDefaultClocks>0</OverrideDefaultClocks>
-        <CpuClock>60000000</CpuClock>
+        <CpuClock>80000000</CpuClock>
         <ClockAutoDetect>0</ClockAutoDetect>
         <ClockWanted>2000000</ClockWanted>
         <JtagSpeed>2000000</JtagSpeed>
-        <Prescaler>30</Prescaler>
+        <Prescaler>40</Prescaler>
         <TimeStampPrescIndex>0</TimeStampPrescIndex>
         <TimeStampPrescData>0</TimeStampPrescData>
         <PcSampCYCTAP>1</PcSampCYCTAP>
@@ -42,7 +42,7 @@
         <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
     </SWOTraceHWSettings>
     <DebugChecksum>
-        <Checksum>2260299105</Checksum>
+        <Checksum>77134370</Checksum>
     </DebugChecksum>
     <Disassembly>
         <MixedMode>1</MixedMode>
@@ -69,8 +69,9 @@
         <Fmt0>{W}1:bit	3	0</Fmt0>
         <Fmt1>{W}1:current	1	0</Fmt1>
         <Fmt2>{W}1:mask	1	0</Fmt2>
-        <Fmt3>{W}42:test	3	0</Fmt3>
-        <Fmt4>{W}42:test_gettick	3	0</Fmt4>
+        <Fmt3>{W}42:flag_recv	3	0</Fmt3>
+        <Fmt4>{W}42:test	3	0</Fmt4>
+        <Fmt5>{W}42:test_gettick	3	0</Fmt5>
     </watch_formats>
     <Trace2>
         <Enabled>0</Enabled>
@@ -117,12 +118,6 @@
         <ShowTimeSum>1</ShowTimeSum>
         <SumSortOrder>0</SumSortOrder>
     </EventLog>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Count>0</Count>
-    </Breakpoints2>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
@@ -132,11 +127,6 @@
         <LogFile>_ ""</LogFile>
         <Category>_ 0</Category>
     </LogFile>
-    <Aliases>
-        <A0>_ "D:\Project_STM32\Project_Temp_Humi_LCD\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_flash_ex.c" ""</A0>
-        <Count>1</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>3</Mode>
@@ -150,4 +140,15 @@
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Count>0</Count>
+    </Breakpoints2>
+    <Aliases>
+        <A0>_ "D:\Project_STM32\Project_Temp_Humi_LCD\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_flash_ex.c" ""</A0>
+        <Count>1</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
 </settings>

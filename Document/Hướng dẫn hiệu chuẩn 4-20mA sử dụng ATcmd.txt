@@ -46,3 +46,11 @@ cho tới khi máy chuẩn đo được dòng 20mA
 Bước 4: Chuyển về mode xuất tín hiệu từ kết quả đo
 - Sử dụng lệnh "at+statedac=0" chuyển sang mode xuất tín hiệu từ kết quả đo 
 
+=================================================================================
+Hiệu chuẩn 4 - mA qua modbus RTU (RS485)
+Register 0x1000: Thanh ghi kiểm tra mode xuất tín hiệu 4 - 20mA (Đọc/Viết Unsigned) 
+Register 0x1001: Thanh ghi đọc giá trị hiệu chuẩn Min 4 - 20mA (Đọc/Viết Unsigned) 
+Register 0x1002: Thanh ghi đọc giá trị hiệu chuẩn Max 4 - 20mA (Đọc/Viết Unsigned) 
+Register 0x1003: Thanh ghi đọc giá trị ADC xuất tín hiệu 4 - 20mA (Đọc/Viết Unsigned) 
+Sử dụng Modbus Poll thực hiện các bước tương đương hiệu chuẩn 4 - 20mA bằng lệnh AT
+

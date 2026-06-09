@@ -21,7 +21,7 @@
 #define DAC_MIN                 0
 #define DAC_MAX                 4095
 
-#define TEMP_MAX                100
+#define TEMP_MAX                99.99
 #define TEMP_MIN                0
 
 #define HUMI_MAX                100
