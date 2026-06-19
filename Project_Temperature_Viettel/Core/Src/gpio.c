@@ -83,12 +83,12 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(SW_SET_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : NET485IO_Pin LED_BL_Pin */
-  GPIO_InitStruct.Pin = NET485IO_Pin|LED_BL_Pin;
+  /*Configure GPIO pin : NET485IO_Pin */
+  GPIO_InitStruct.Pin = NET485IO_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(NET485IO_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : SW_DOWN_Pin SW_UP_Pin SW_EXIT_Pin */
   GPIO_InitStruct.Pin = SW_DOWN_Pin|SW_UP_Pin|SW_EXIT_Pin;
@@ -102,6 +102,13 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(ON_SEN_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : LED_BL_Pin */
+  GPIO_InitStruct.Pin = LED_BL_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(LED_BL_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : SW_ON_BL_Pin */
   GPIO_InitStruct.Pin = SW_ON_BL_Pin;

@@ -12,7 +12,7 @@ sEvent_struct               sEventAppRs485[]=
 {
   {_EVENT_RS485_ENTRY,              1, 5, 5,                fevent_rs485_entry},            //Doi slave khoi dong moi truyen opera
   {_EVENT_RS485_INIT_UART,          1, 5, 5,                fevent_rs485_init_uart},
-  {_EVENT_RS485_RECEIVE_COMPLETE,   0, 5, 20,                fevent_rs485_receive_complete},
+  {_EVENT_RS485_RECEIVE_COMPLETE,   0, 5, 20,               fevent_rs485_receive_complete},
 
   {_EVENT_RS485_REFRESH,            0, 5, 60000*2,          fevent_rs485_refresh},
 };

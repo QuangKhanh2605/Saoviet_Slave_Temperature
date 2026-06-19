@@ -18,7 +18,7 @@ extern sData   sFirmVersion;
 
 sEvent_struct sEventDisplay [] =
 {
-    { _EVENT_DISP_INIT, 		    1, 5, 1500, 	_Cb_Display_Init }, 
+    { _EVENT_DISP_INIT, 		    1, 5, 2000, 	_Cb_Display_Init }, 
     { _EVENT_DISP_LOGO, 		    0, 0, 2000, 	_Cb_Display_Logo}, 
     { _EVENT_DISP_SHOW, 		    0, 0, 200,      _Cb_Display_Show }, 
     { _EVENT_DISP_AUTO_SW, 		    0, 0, 5000,     _Cb_Display_Auto_SW }, 
@@ -449,7 +449,21 @@ static uint8_t _Cb_Display_Show (uint8_t event)
 //    } else {
 //        fevent_active(sEventDisplay, _EVENT_DISP_INIT); 
 //    }
-    Display_Show_Screen(sLCD.sScreenNow.Index_u8);
+    if (Check_Time_Out(sButton.LandMarkPressButton_u32, 5*60000) == true) 
+    {
+        LCD_ClearLine();
+        LCD_SegOff(LCD_COM_1, LCD_PIN_23);    //%Temp C
+        LCD_SegOff(LCD_COM_3, LCD_PIN_23);    //%RH
+        HAL_LCD_UpdateDisplayRequest(&hlcd);
+        sCtrlLed.ButtonCtrl = 1;
+        HAL_GPIO_WritePin(LED_BL_GPIO_Port, LED_BL_Pin, GPIO_PIN_SET);
+        sButton.LandMarkPressButton_u32 = RtCountSystick_u32 - 5*60000 - 1000;
+    }
+    else
+    {
+        Display_Show_Screen(sLCD.sScreenNow.Index_u8);
+        sCtrlLed.ButtonCtrl = 0;
+    }
     //ghi moc thoi gian man hinh dc chuyen: cho su kien auto next
 //    if (sLCD.sScreenNow.Index_u8 != ScreenLast) {
 //        ScreenLast = sLCD.sScreenNow.Index_u8;
