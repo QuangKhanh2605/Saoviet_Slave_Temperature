@@ -128,7 +128,7 @@ typedef struct
     uint8_t Led_Rx;
     uint8_t Led_Tx;
     
-    uint8_t ButtonCtrl;
+    uint8_t LCD_Off;
 }sStructCtrlLed;
 
 extern sEvent_struct        sEventAppSensor[];

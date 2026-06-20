@@ -294,6 +294,8 @@ typedef struct
     uint8_t     Index_LCD_P1;
     uint8_t     Index_LCD_P2;
     uint8_t     Index_LCD_P3;
+    
+    uint32_t    LandMarkDisplay_u32;
 }Struct_Index_LCD;
 
 extern sEvent_struct        sEventDisplay[];

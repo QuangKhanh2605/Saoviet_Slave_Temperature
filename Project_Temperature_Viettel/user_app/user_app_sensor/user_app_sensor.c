@@ -252,7 +252,7 @@ static uint8_t fevent_lcd_backlight(uint8_t event)
     {
         Save_StateBackLight(!sCtrlLed.BackLight);
         state_button = 0;
-        sButton.LandMarkPressButton_u32 = RtCountSystick_u32;
+        sIndexLCD.LandMarkDisplay_u32 = RtCountSystick_u32;
     }
 
     fevent_enable(sEventAppSensor, event);
@@ -270,7 +270,7 @@ static uint8_t fevent_lcd_warning(uint8_t event)
         {
             Result = true;
             sAlarm.State_Temp_u8 = 1;
-            sButton.LandMarkPressButton_u32 = RtCountSystick_u32;
+            sIndexLCD.LandMarkDisplay_u32 = RtCountSystick_u32;
         }
     }
     
@@ -280,7 +280,7 @@ static uint8_t fevent_lcd_warning(uint8_t event)
         {
             Result = true;
             sAlarm.State_Humi_u8 = 1;
-            sButton.LandMarkPressButton_u32 = RtCountSystick_u32;
+            sIndexLCD.LandMarkDisplay_u32 = RtCountSystick_u32;
         }
     }
   
@@ -296,7 +296,7 @@ static uint8_t fevent_lcd_warning(uint8_t event)
             HAL_GPIO_WritePin(LED_BL_GPIO_Port, LED_BL_Pin, GPIO_PIN_SET);
     }
     
-    if(sCtrlLed.ButtonCtrl == 1)
+    if(sCtrlLed.LCD_Off == 1)
         HAL_GPIO_WritePin(LED_BL_GPIO_Port, LED_BL_Pin, GPIO_PIN_SET);
     
     sEventAppSensor[_EVENT_LCD_WARNING].e_period = 750;

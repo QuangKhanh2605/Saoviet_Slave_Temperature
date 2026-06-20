@@ -449,20 +449,21 @@ static uint8_t _Cb_Display_Show (uint8_t event)
 //    } else {
 //        fevent_active(sEventDisplay, _EVENT_DISP_INIT); 
 //    }
-    if (Check_Time_Out(sButton.LandMarkPressButton_u32, 5*60000) == true) 
+    if (Check_Time_Out(sIndexLCD.LandMarkDisplay_u32, 5*60000) == true) 
     {
         LCD_ClearLine();
         LCD_SegOff(LCD_COM_1, LCD_PIN_23);    //%Temp C
         LCD_SegOff(LCD_COM_3, LCD_PIN_23);    //%RH
         HAL_LCD_UpdateDisplayRequest(&hlcd);
-        sCtrlLed.ButtonCtrl = 1;
+        
+        sCtrlLed.LCD_Off = 1;
         HAL_GPIO_WritePin(LED_BL_GPIO_Port, LED_BL_Pin, GPIO_PIN_SET);
-        sButton.LandMarkPressButton_u32 = RtCountSystick_u32 - 5*60000 - 1000;
+        sIndexLCD.LandMarkDisplay_u32 = RtCountSystick_u32 - 5*60000 - 1000;
     }
     else
     {
         Display_Show_Screen(sLCD.sScreenNow.Index_u8);
-        sCtrlLed.ButtonCtrl = 0;
+        sCtrlLed.LCD_Off = 0;
     }
     //ghi moc thoi gian man hinh dc chuyen: cho su kien auto next
 //    if (sLCD.sScreenNow.Index_u8 != ScreenLast) {
@@ -531,6 +532,7 @@ static uint8_t _Cb_button_scan (uint8_t event)
     if (sButton.Status == 1) {
         fevent_active(sEventDisplay, _EVENT_BUTTON_DETECTTED);
         sButton.LandMarkPressButton_u32 = RtCountSystick_u32;
+        sIndexLCD.LandMarkDisplay_u32 = RtCountSystick_u32;
     }
 
     fevent_enable(sEventDisplay, event);
