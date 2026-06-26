@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_8Chanel_4-20mA_To_RS485\EWARM\settings\Project_8Chanel_4-20mA_To_RS485.Project_8Chanel_4-20mA_To_RS485.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_8Chanel_4-20mA_To_RS485\EWARM\settings\Project_8Chanel_4-20mA_To_RS485.Project_8Chanel_4-20mA_To_RS485.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_Slave_Temperature\Project_8Chanel_4-20mA_To_RS485\EWARM\settings\Project_8Chanel_4-20mA_To_RS485.Project_8Chanel_4-20mA_To_RS485.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_Slave_Temperature\Project_8Chanel_4-20mA_To_RS485\EWARM\settings\Project_8Chanel_4-20mA_To_RS485.Project_8Chanel_4-20mA_To_RS485.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_8Chanel_4-20mA_To_RS485\EWARM\settings\Project_8Chanel_4-20mA_To_RS485.Project_8Chanel_4-20mA_To_RS485.general.xcl" --debug_file=$debugfile --backend -f "D:\Saoviet_Git\Saoviet_Slave_Temp_Motor\Project_8Chanel_4-20mA_To_RS485\EWARM\settings\Project_8Chanel_4-20mA_To_RS485.Project_8Chanel_4-20mA_To_RS485.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_Slave_Temperature\Project_8Chanel_4-20mA_To_RS485\EWARM\settings\Project_8Chanel_4-20mA_To_RS485.Project_8Chanel_4-20mA_To_RS485.general.xcl" --debug_file=$debugfile --backend -f "D:\Saoviet_Git\Saoviet_Slave_Temperature\Project_8Chanel_4-20mA_To_RS485\EWARM\settings\Project_8Chanel_4-20mA_To_RS485.Project_8Chanel_4-20mA_To_RS485.driver.xcl" 
 }
